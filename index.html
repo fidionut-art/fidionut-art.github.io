@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>smc-bot</title>
+<style>
+  :root { --ink:#12161c; --muted:#5c6672; --line:#e3e7ec; --bg:#fff; --accent:#1f5f4f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e8ecf1; --muted:#98a3b0; --line:#252c35; --bg:#0f1319; --accent:#6ec8ac; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 620px; margin: 0 auto; padding: 80px 24px 96px; }
+  h1 { font-size: 28px; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); margin: 0 0 40px; font-size: 17px; }
+  h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.07em;
+       color: var(--accent); margin: 36px 0 10px; }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  footer { margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--line);
+           color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>smc-bot</h1>
+  <p class="sub">A private algorithmic trading application built on the cTrader Open API.</p>
+
+  <h2>What it does</h2>
+  <p>
+    smc-bot is a self-hosted program that implements a Smart Money Concepts strategy on
+    index CFDs and FX. It evaluates a fixed rule set on closed candles and places orders
+    with a stop loss attached to every position.
+  </p>
+  <p>
+    It runs for a single trading account owned by its author. It is not a signal service,
+    it is not sold or licensed, and it does not manage funds for anyone else.
+  </p>
+
+  <h2>How the Open API is used</h2>
+  <ul>
+    <li>Reading account state: balance, equity, open positions and pending orders.</li>
+    <li>Reading historical and live price data for the traded symbols.</li>
+    <li>Placing, modifying and cancelling orders on the author's own account.</li>
+  </ul>
+  <p>
+    Access tokens are stored locally and never shared. The application has no public
+    interface, no user accounts, and collects no data from anyone.
+  </p>
+
+  <h2>Contact</h2>
+  <p><a href="https://github.com/fidionut-art">github.com/fidionut-art</a></p>
+
+  <footer>
+    This site describes a private software project. Nothing here is investment advice
+    or an offer of any financial service.
+  </footer>
+
+</div>
+</body>
+</html>
